@@ -16,7 +16,7 @@ public class Booking {
     }
 
     public void display() {
-        System.out.println("🧾 Booking " + id + ": ");
+        System.out.println("Booking " + id + ":");
         flight.display();
     }
 }

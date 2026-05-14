@@ -21,17 +21,24 @@ The project currently includes `lib/mysql-connector-j-9.2.0.jar`, so it can be c
 
 ## Database Setup
 
-1. Start MySQL.
-2. Run the schema file:
+Start MySQL, then import the schema.
 
-```sql
-SOURCE database.sql;
+Windows PowerShell:
+
+```powershell
+Get-Content .\database.sql | mysql -u root -p
 ```
 
-If you are using the MySQL command line from this project folder, you can also run:
+CMD or Git Bash:
 
 ```bash
 mysql -u root -p < database.sql
+```
+
+MySQL prompt:
+
+```sql
+SOURCE D:/coding/FlightBookingSystem/database.sql;
 ```
 
 The default database is `flightdb`. The seed admin account is:
@@ -57,9 +64,11 @@ $env:FLIGHT_DB_PASSWORD = "your_mysql_password"
 
 ## Compile and Run
 
-From the project folder:
+From the project folder on Windows PowerShell:
 
 ```powershell
+cd D:\coding\FlightBookingSystem
+$env:FLIGHT_DB_PASSWORD = "your_mysql_password"
 javac -cp "lib/mysql-connector-j-9.2.0.jar;." *.java
 java -cp "lib/mysql-connector-j-9.2.0.jar;." Main
 ```
@@ -75,16 +84,16 @@ java -cp "lib/mysql-connector-j-9.2.0.jar:." Main
 
 ```text
 FlightBookingSystem/
-├── Booking.java
-├── Database.java
-├── DBConnection.java
-├── Flight.java
-├── Main.java
-├── User.java
-├── Utils.java
-├── database.sql
-└── lib/
-    └── mysql-connector-j-9.2.0.jar
+|-- Booking.java
+|-- Database.java
+|-- DBConnection.java
+|-- Flight.java
+|-- Main.java
+|-- User.java
+|-- Utils.java
+|-- database.sql
+`-- lib/
+    `-- mysql-connector-j-9.2.0.jar
 ```
 
 ## Notes

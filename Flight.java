@@ -12,7 +12,7 @@ public class Flight {
     }
 
     public void display() {
-        System.out.println("✈️ Flight " + id + ": " + fromCity + " ➜ " + toCity +
-            " | " + time + " | ₹" + price);
+        System.out.println("Flight " + id + ": " + fromCity + " -> " + toCity
+            + " | " + time + " | Rs. " + price);
     }
 }
