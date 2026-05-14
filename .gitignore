@@ -1,0 +1,18 @@
+# Java build outputs
+*.class
+*.jar
+!lib/mysql-connector-j-9.2.0.jar
+out/
+build/
+target/
+
+# Local IDE and OS files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Local environment files
+.env
+*.log
